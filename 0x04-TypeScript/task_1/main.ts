@@ -45,22 +45,21 @@ console.log(formattedName);
 
 
 
-interface StudentConstructorArgs {
+interface studentClassConstructor {
     firstName: string;
     lastName: string;
   }
   
-  // Interface for the StudentClass
-  interface Student {
+  interface studentClassInterface {
     workOnHomework(): string;
     displayName(): string;
   }
   
-  class StudentClass implements Student {
+  class StudentClass implements studentClassInterface {
     private firstName: string;
     private lastName: string;
   
-    constructor(args: StudentConstructorArgs) {
+    constructor(args: studentClassConstructor) {
       this.firstName = args.firstName;
       this.lastName = args.lastName;
     }
@@ -74,7 +73,6 @@ interface StudentConstructorArgs {
     }
   }
   
-  // Example usage (optional)
   const student1 = new StudentClass({ firstName: 'Alice', lastName: 'Jones' });
-  console.log(student1.displayName()); // Output: Alice
+  console.log(student1.displayName()); 
   console.log(student1.workOnHomework());
