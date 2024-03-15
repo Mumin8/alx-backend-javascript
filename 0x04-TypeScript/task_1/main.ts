@@ -42,3 +42,39 @@ function printTeacher(firstName: string, lastName: string): string{
 
 const formattedName = printTeacher("John", "Doe");
 console.log(formattedName);
+
+
+
+interface StudentConstructorArgs {
+    firstName: string;
+    lastName: string;
+  }
+  
+  // Interface for the StudentClass
+  interface Student {
+    workOnHomework(): string;
+    displayName(): string;
+  }
+  
+  class StudentClass implements Student {
+    private firstName: string;
+    private lastName: string;
+  
+    constructor(args: StudentConstructorArgs) {
+      this.firstName = args.firstName;
+      this.lastName = args.lastName;
+    }
+  
+    workOnHomework(): string {
+      return 'Currently working';
+    }
+  
+    displayName(): string {
+      return this.firstName;
+    }
+  }
+  
+  // Example usage (optional)
+  const student1 = new StudentClass({ firstName: 'Alice', lastName: 'Jones' });
+  console.log(student1.displayName()); // Output: Alice
+  console.log(student1.workOnHomework());
