@@ -3,5 +3,7 @@ namespace Subjects {
         firstName: string;
         lastName: string;
         experienceTeachingC?: number;
+        experienceTeachingReact?: number;
+        experienceTeachingJava?: number;
     }
 }

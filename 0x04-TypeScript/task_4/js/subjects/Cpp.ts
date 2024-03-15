@@ -1,5 +1,5 @@
 namespace Subjects {
-    export interface Teacher {
+    export  interface Teacher {
         experienceTeachingC?: number;
     }
 
@@ -15,4 +15,6 @@ namespace Subjects {
             return "No available teacher";
         }
     }
+
+   
 }
