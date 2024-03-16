@@ -6,5 +6,5 @@ const  getListStudents = () => {
     ];
   }
   
-  export default getListStudents;
+  module.exports = getListStudents;
   
