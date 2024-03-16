@@ -1,5 +1,4 @@
-// 3-get_ids_sum.js
-function getStudentIdsSum(students) {
+const getStudentIdsSum = (students) => {
     return students.reduce((sum, student) => sum + student.id, 0);
   }
   

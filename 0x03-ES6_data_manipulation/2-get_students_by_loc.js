@@ -1,6 +1,3 @@
-const getStudentsByLocation = (students, city) => {
-    return students.filter(student => student.location === city);
-  }
-  
-  module.exports = getStudentsByLocation;
-  
+export default function getStudentsByLocation(list, city) {
+  return list.filter((obj) => obj.location === city);
+}
